@@ -10,7 +10,10 @@ export default {
 		const randomQuote = quotes[randomIndex];
 
 		return new Response(JSON.stringify(randomQuote), {
-			headers: { "Content-Type": "application/json" },
+			headers: {
+				"Content-Type": "application/json",
+				"Access-Control-Allow-Origin": "*",
+			},
 		});
 	},
 };
